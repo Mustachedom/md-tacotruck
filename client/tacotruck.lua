@@ -68,7 +68,7 @@ end
 
 local function TooFarAway()
     QBCore.Functions.Notify("Damn Homie You Gotta Stay Around The Area", 'error')
-   -- LocalPlayer.state:set("inv_busy", false, true)
+    LocalPlayer.state:set("inv_busy", false, true)
     cornerselling = false
     hasTarget = false
     availableDrugs = {}
@@ -189,7 +189,7 @@ end
 local function ToggleSelling()
     if not cornerselling then
         cornerselling = true
-       -- LocalPlayer.state:set("inv_busy", true, true)
+        LocalPlayer.state:set("inv_busy", true, true)
         QBCore.Functions.Notify("Selling Some Tacos BB")
         local startLocation = GetEntityCoords(PlayerPedId())
         CreateThread(function()
@@ -220,7 +220,7 @@ local function ToggleSelling()
         stealingPed = nil
         stealData = {}
         cornerselling = false
-       -- LocalPlayer.state:set("inv_busy", false, true)
+        LocalPlayer.state:set("inv_busy", false, true)
         QBCore.Functions.Notify("Sure Stop Selling Lazy Ass")
     end
 end
@@ -233,7 +233,7 @@ RegisterNetEvent('md-tacotruck:client:cornerselling', function()
 				ToggleSelling()
 			else
 				QBCore.Functions.Notify("No More Tacos", 'error')
-				--LocalPlayer.state:set("inv_busy", false, true)
+				LocalPlayer.state:set("inv_busy", false, true)
 			end
     end)
 end)
@@ -244,6 +244,6 @@ RegisterNetEvent('md-tacotruck:client:refreshAvailableDrugs', function(items)
     if availableDrugs == nil or #availableDrugs <= 0 then
         QBCore.Functions.Notify("No Tacos Left", 'error')
         cornerselling = false
-        --LocalPlayer.state:set("inv_busy", false, true)
+        LocalPlayer.state:set("inv_busy", false, true)
     end
 end)
