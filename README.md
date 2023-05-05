@@ -37,7 +37,7 @@ Config.BossMenuZones = {
 step 3
 ``` 
 add this to your items.lua
-["mdtacos"] 			 =          {["name"] = "mdtacos",      ["label"] = "Yoga Mat",          ["weight"] = 1, ["type"] = "item", ["image"] = "mdtacos.png", ["unique"] = false, ["useable"] = false, ['shouldClose'] = false, ["combinable"] = nil, ["description"] = ""},
+["mdtacos"] 			 =          {["name"] = "mdtacos",      ["label"] = "MD Tacos",          ["weight"] = 1, ["type"] = "item", ["image"] = "mdtacos.png", ["unique"] = false, ["useable"] = false, ['shouldClose'] = false, ["combinable"] = nil, ["description"] = ""},
 ```
 
 step 4
